@@ -47,7 +47,6 @@ pub fn solution_part_1(input: &Path) -> u32 {
 
 pub fn solution_part_2(input: &Path) -> u32 {
     let mut first = vec![];
-    let mut second = vec![];
     let mut second_dupes_map: HashMap<u32, u32> = HashMap::new();
 
     let reader = File::open(input)
@@ -65,7 +64,6 @@ pub fn solution_part_2(input: &Path) -> u32 {
 
         if let Some(s) = args.next() {
             let snum: u32 = s.parse().expect("value {s} should be valid number.");
-            second.push(snum);
             second_dupes_map
                 .entry(snum)
                 .and_modify(|counter| *counter += 1)
@@ -91,7 +89,7 @@ mod tests {
     #[test]
     fn total_distance() {
         let path = Path::new("src/day_01/aoc_test_input.txt");
-        assert_eq!(solution(&path), 11);
+        assert_eq!(solution_part_1(&path), 11);
     }
 
     #[test]
