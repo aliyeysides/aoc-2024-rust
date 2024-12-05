@@ -25,12 +25,12 @@ pub fn solution_part_1(file: &Path) -> u32 {
             .map(|v| v.parse().expect("value should be a number."))
             .collect();
 
-        let mut _direction: Direction = Direction::NONE;
         let mut prev_direction: Direction = Direction::NONE;
 
         for i in 1..args.len() {
             let prev: u32 = args[i - 1];
             let curr: u32 = args[i];
+            let mut _direction: Direction = Direction::NONE;
 
             if prev > curr {
                 _direction = Direction::DESC;
@@ -38,7 +38,7 @@ pub fn solution_part_1(file: &Path) -> u32 {
                 _direction = Direction::ASC;
             }
 
-            if prev_direction != _direction && i > 1 {
+            if _direction != prev_direction && i > 1 {
                 continue 'line;
             }
 
