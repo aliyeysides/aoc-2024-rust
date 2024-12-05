@@ -88,13 +88,13 @@ mod tests {
 
     #[test]
     fn total_distance() {
-        let path = Path::new("src/day_01/aoc_test_input.txt");
+        let path = Path::new("src/day_01/test_input.txt");
         assert_eq!(solution_part_1(&path), 11);
     }
 
     #[test]
     fn similarity_score() {
-        let path = Path::new("src/day_01/aoc_test_input.txt");
+        let path = Path::new("src/day_01/test_input.txt");
         assert_eq!(solution_part_2(&path), 31);
     }
 }
