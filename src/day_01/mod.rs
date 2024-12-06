@@ -36,7 +36,6 @@ pub fn solution_part_1(input: &Path) -> u32 {
         distance += delta;
     }
 
-    println!("distance is {distance}");
     distance
 }
 
@@ -72,7 +71,6 @@ pub fn solution_part_2(input: &Path) -> u32 {
         score += num * second_dupes_map.get(num).unwrap_or(&0);
     }
 
-    println!("similarity score is {score}");
     score
 }
 
