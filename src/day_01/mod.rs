@@ -26,11 +26,6 @@ pub fn solution_part_1(input: &Path) -> u32 {
         }
     }
 
-    let is_same_len = first.len() == second.len();
-    if !is_same_len {
-        panic!("data should match in length.");
-    }
-
     first.sort();
     second.sort();
 
